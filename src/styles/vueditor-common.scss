@@ -1,0 +1,48 @@
+@import "~highlight.js/styles/monokai.css";
+
+.vueditor-container {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.vueditor-input-area {
+  min-height: 700px;
+  float: left;
+  width: 50%;
+  border-right: 2px dotted black;
+  resize: none;
+  margin-right: 10px;
+  transition: box-shadow .15s ease-in-out;
+  font-family: 'Fira Code';
+  &:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.5);
+    transition: box-shadow .15s ease-in-out
+  }
+}
+
+.vueditor-preview {
+  margin-left: 10px;
+  min-height: 506px;
+  overflow-y: scroll;
+  background-color: #eee;
+  font-size: 13px;
+  font-family: '等线';
+  blockquote {
+      background: #f9f9f9;
+      border-left: 10px solid #ccc;
+      margin: 1.5em 10px;
+      padding: 0.5em 10px;
+      quotes: "\201C""\201D""\2018""\2019";
+      &:before {
+        color: #ccc;
+        content: open-quote;
+        font-size: 4em;
+        line-height: 0.1em;
+        margin-right: 0.25em;
+        vertical-align: -0.4em;
+      }
+      p {
+        display: inline;
+      }
+  }
+}
